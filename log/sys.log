@@ -1,0 +1,2 @@
+2019-12-10 19:30:01,191 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2019-12-10 19:30:19,307 INFO (StartupInfoLogger.java:61)- Started Live2dApplication in 30.05 seconds (JVM running for 31.515)

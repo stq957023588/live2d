@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" th:src="@{/live2d/js/vue.js}"></script>
+    <script type="text/javascript" th:src="@{/live2d/js/SlzTools.js}"></script>
+</head>
+<body>
+    <div id="container" >
+        <input id="btnChange" type="button" value="222">
+        <button type="button" @click="changeModelVue($event)">TTTTTTTTT</button>
+        <canvas id="glcanvas" width="500px" height="500px" style="position:fixed;right:0px;bottom:-10px;"></canvas>
+    </div>
+</body>
+<script type="text/javascript" th:src="@{/live2d/plugins/live2d/lib/live2d.min.js}"></script>
+<script type="text/javascript" th:src="@{/live2d/plugins/live2d/framework/Live2DFramework.js}"></script>
+<script type="text/javascript" th:src="@{/live2d/plugins/live2d/utils/MatrixStack.js}"></script>
+<script type="text/javascript" th:src="@{/live2d/plugins/live2d/utils/ModelSettingJson.js}"></script>
+<script type="text/javascript" th:src="@{/live2d/plugins/live2d/PlatformManager.js}"></script>
+<script type="text/javascript" th:src="@{/live2d/plugins/live2d/LAppDefine.js}"></script>
+<script type="text/javascript" th:src="@{/live2d/plugins/live2d/LAppModel.js}"></script>
+<script type="text/javascript" th:src="@{/live2d/plugins/live2d/LAppLive2DManager.js}"></script>
+<script type="text/javascript" th:src="@{/live2d/plugins/live2d/SampleApp1.js}"></script>
+<script type="text/javascript">
+
+    var canvas=new Vue({
+        el:"#container",
+        data:{
+
+        },
+        created:function (){
+            var _this = this;
+            document.onkeydown = function(e){
+                let _key = window.event.keyCode;
+                _this.test(_key);
+            }
+        },
+        mounted:function (){
+        },
+        methods:{
+            test:function (keyCode){
+                // console.log(keyCode)
+            },
+            changeModelVue:function (dom){
+                changeModel(dom.currentTarget)
+            }
+        }
+    })
+    sampleApp1();
+</script>
+
+</html>

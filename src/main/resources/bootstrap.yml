@@ -1,0 +1,36 @@
+
+spring:
+  application:
+    name: Live2d
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: Server-Config
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 1
+    lease-renewal-interval-in-seconds: 2
+  client:
+    service-url:
+#      defaultZone: http://47.92.249.36:8762/eureka/
+      defaultZone: http://127.0.0.1:8762/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+

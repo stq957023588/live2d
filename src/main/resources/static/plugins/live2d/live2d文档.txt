@@ -1,0 +1,3 @@
+初始化:
+    SampleApp1.initL2dCanvas-绑定鼠标事件,根据鼠标事件
+    LAppLive2DManager.prototype.changeModel-设置/更改模型
